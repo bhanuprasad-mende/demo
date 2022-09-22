@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'ruby:3.0.1' } }
+  agent { docker { image 'ruby:3.0.1-alpine' } }
   stages {
     stage('requirements') {
       steps {
