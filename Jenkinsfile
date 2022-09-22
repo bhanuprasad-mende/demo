@@ -8,7 +8,10 @@ pipeline {
     }
     stage('build') {
       steps {
+        echo 'process start'
         sh 'bundle install'
+        sh 'rails db:migrate'
+        echo 'process end'
       }
     }
     // stage('test') {
